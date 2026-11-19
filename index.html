@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>إلى بسملة ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;min-height:100vh;overflow:hidden;
+display:flex;align-items:center;justify-content:center;
+text-align:center;color:#fff0f3;
+background:radial-gradient(ellipse,#64132d,#260814 65%,#10030b);
+font-family:Amiri,serif
+}
+.stars{
+position:fixed;inset:0;
+background-image:radial-gradient(white 1px,transparent 1px);
+background-size:65px 65px;opacity:.4
+}
+main{position:relative;padding:20px;width:100%}
+.poem{font-size:clamp(25px,5vw,43px);line-height:1.8;text-shadow:0 0 18px #ff8ba8}
+.heart{
+font:clamp(100px,22vw,155px) Arial;
+color:#ff174f;filter:drop-shadow(0 0 18px #ff174f);
+animation:beat 1s infinite
+}
+.roses{display:flex;justify-content:center;gap:12px;direction:ltr}
+.rose{font-size:clamp(35px,8vw,55px);animation:sway 2s infinite alternate}
+.rose:nth-child(even){animation-delay:.5s}
+.name{
+font:clamp(55px,12vw,85px) 'Great Vibes',cursive;
+color:#ffd3dd;text-shadow:0 0 20px #ff6b91;
+direction:ltr
+}
+.petal{
+position:fixed;top:-30px;color:#ff5279;
+animation:fall linear infinite
+}
+@keyframes beat{50%{transform:scale(1.14)}}
+@keyframes sway{to{transform:translateY(-9px) rotate(9deg)}}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<main>
+<p class="poem">
+فَأَنَا الَّذِي بِهِيَامِهِ وَغَرَامِهِ<br>
+أَهْوَاكِ يَا قَمَرًا عَلَى رَأْسِ الْمَلَا
+</p>
+<div class="heart">♥</div>
+<div class="roses">
+<span class="rose">🌹</span>
+<span class="rose">🌹</span>
+<span class="rose">🌹</span>
+<span class="rose">🌹</span>
+<span class="rose">🌹</span>
+</div>
+<div class="name">Basmala</div>
+</main>
+<script>
+for(let i=0;i<25;i++){
+let p=document.createElement('span');
+p.className='petal';
+p.textContent='✿';
+p.style.left=Math.random()*100+'vw';
+p.style.animationDuration=(7+Math.random()*9)+'s';
+p.style.animationDelay=(-Math.random()*15)+'s';
+document.body.appendChild(p);
+}
+</script>
+</body>
+</html>
